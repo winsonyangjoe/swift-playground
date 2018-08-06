@@ -2,11 +2,15 @@
 //: # Class vs Struct
 //: ## Class
 //: ### an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods) - Wikipedia
-class Vehicle {
-    var numberOfTires: Int?
-    var passengerCapacity: Int?
-    var name: String?
-}
+//class Vehicle {
+//    var numberOfTires: Int?
+//    var passengerCapacity: Int?
+//    var name: String?
+//
+//    func drive() {
+//        print("ngeeengggg")
+//    }
+//}
 
 
 
@@ -14,12 +18,48 @@ class Vehicle {
 //: ### lets get back a bit to basic, shall we?
 //: 1. Information Hiding
 //: 2. I*********e
-//: 3. **ly*****ism
+//: 3. p********ism
 //: Challenge: let's discuss and make example of those concept
+class Vehicle {
+    private var numberOfTires: Int?
+    public var passengerCapacity: Int?
+    var name: String?
+    
+    func drive() {
+        print("ngeeengggg")
+    }
+}
+
+class Car: Vehicle {
+    func test() {
+//        print(passengerCapacity)
+    }
+    
+    override func drive() {
+        print("broom")
+    }
+}
+
+let v = Vehicle()
+let c = Car()
+
+c.drive()
+// ((Vehicle) c).drive()
+let carVehicle = c as Vehicle
+carVehicle.drive()
+
+//v.
 
 
 
 //: ### AS, AS?, AS!
+let newCar: Car? = nil
+
+if let newVehicle = newCar as? Vehicle {
+    newVehicle.drive()
+} else {
+    print("failed to type cast")
+}
 
 
 
@@ -30,6 +70,10 @@ struct Car {
     let year: String
     let make: String
     let seatCount: Int
+    
+    func drive() {
+        
+    }
 }
 
 
