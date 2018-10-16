@@ -1,3 +1,4 @@
+
 //: [Previous](@previous)
 //: 👈 _thou shall always be able to restart from previous checkpoint_
 //: # Let's Learn `Control Flow`
@@ -30,15 +31,15 @@ default: print("apapun")
 
 
 //: ### Guard statement
-if a % 2 == 0, b % 2 == 0 {
-    print("genap")
-} else if b == 10 {
-    print("asdf")
-} else {
-    print("ganjil")
-}
-
 let optional: Int? = nil
+
+func test() {
+    guard let unwrapped = optional else { return }
+    print(unwrapped)
+}
+test()
+
+
 
 //:  if - let
 if let unwrapped = optional {
@@ -48,26 +49,9 @@ if let unwrapped = optional {
 }
 
 
-func abc() {
-    guard let optional = optional else {
-        print("salah")
-        return
-    }
-
-    print (optional)
-    // lalalal
-}
-
-abc()
-
 
 //: ## Iterative Control Flow (Loop)
 //: ### for - in loop
-// range
-// 1,2,3
-
-// for (int i=0; i<10; i++)
-
 let array = [1,2,3,4,5,6]
 
 for element in array {
@@ -86,8 +70,8 @@ var numerator = 0
 while numerator < 10 {
     print(numerator)
     numerator += 1
-//    -- ++ numerator ++ -- ++ --
 }
+
 
 
 //: ### repeat - while loop
@@ -98,12 +82,14 @@ repeat {
 } while numerator < 10
 
 
+
 //: ## selection x loop
 let newArray = [1,2,3,4,5,6,7,8,9,10]
 
 for element in newArray where element % 2 == 0 {
-    print(element)    
+    print(element)
 }
+
 
 
 //: ## Let's call it a wrap!

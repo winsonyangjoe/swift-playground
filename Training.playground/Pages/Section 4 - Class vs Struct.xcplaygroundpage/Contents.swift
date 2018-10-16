@@ -2,15 +2,15 @@
 //: # Class vs Struct
 //: ## Class
 //: ### an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods) - Wikipedia
-//class Vehicle {
-//    var numberOfTires: Int?
-//    var passengerCapacity: Int?
-//    var name: String?
-//
-//    func drive() {
-//        print("ngeeengggg")
-//    }
-//}
+class Vehicle {
+    var numberOfTires: Int?
+    var passengerCapacity: Int?
+    var name: String?
+
+    func drive() {
+        print("ngeeengggg")
+    }
+}
 
 
 
@@ -20,19 +20,9 @@
 //: 2. I*********e
 //: 3. p********ism
 //: Challenge: let's discuss and make example of those concept
-class Vehicle {
-    private var numberOfTires: Int?
-    public var passengerCapacity: Int?
-    var name: String?
-    
-    func drive() {
-        print("ngeeengggg")
-    }
-}
-
 class Car: Vehicle {
     func test() {
-//        print(passengerCapacity)
+        print(passengerCapacity)
     }
     
     override func drive() {
@@ -43,17 +33,13 @@ class Car: Vehicle {
 let v = Vehicle()
 let c = Car()
 
-c.drive()
-// ((Vehicle) c).drive()
 let carVehicle = c as Vehicle
 carVehicle.drive()
-
-//v.
 
 
 
 //: ### AS, AS?, AS!
-let newCar: Car? = nil
+let newCar: Any = Car()
 
 if let newVehicle = newCar as? Vehicle {
     newVehicle.drive()
@@ -65,7 +51,7 @@ if let newVehicle = newCar as? Vehicle {
 
 //: ## Struct
 //: ### a composite data type (or record) declaration that defines a physically grouped list of variables to be placed under one name in a block of memory, allowing the different variables to be accessed via a single pointer, or the struct declared name which returns the same address.
-struct Car {
+struct CarStruct {
     let model: String
     let year: String
     let make: String

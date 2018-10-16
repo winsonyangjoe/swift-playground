@@ -112,24 +112,6 @@ func filterMethod(_ input: Int) -> Bool {
     return input % 2 == 0
 }
 
-let r = filter(from: arr, with: filterMethod) // closure
-print(r)
-
-// Closure
-filter(from: arr, with: { value -> Bool in
-    return true
-})
-
-// trailing closure
-
-filter(from: arr) { value -> Bool in
-    return false
-}
-
-
-//: ## And yeah! It can be nested
-//: ### Why it can't be? Everything can be nested when we're talking about programming 🤣
-
 
 
 //: ## Let's move on!
