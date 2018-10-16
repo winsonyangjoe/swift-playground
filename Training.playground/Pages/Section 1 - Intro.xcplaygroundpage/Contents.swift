@@ -19,10 +19,22 @@
 
 
 //: ### let vs var
+let a = 1 // immutable, constant
+var b = 2
+
+var floatingNumber = 1.0 // Double, Float
+var iniFloatType: Float = 1.0
+var iniDouble: Double = 1.0
 
 
 
 //: # Swift Optionals
+var foo: Int?
+foo = 123
+print(foo!)
+
+var normal: Int = 123
+print(normal)
 
 
 
